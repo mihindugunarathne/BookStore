@@ -30,8 +30,4 @@ A mobile application for a book store with features like book browsing, cart man
 3. Run `flutter pub get`
 4. Launch app with `flutter run`
 
-## Screenshots
-![Screenshot1]("C:\Users\mihin\Pictures\Screenshots\Screenshot 2025-01-25 115322.png")
-![Screenshot2]("C:\Users\mihin\Pictures\Screenshots\Screenshot 2025-01-25 115332.png")
-
 
