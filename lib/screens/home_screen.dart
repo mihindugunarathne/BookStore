@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   final List<Book> books = [
     Book(
       id: '1',
-      title: 'The Catcher in the Rye',
+      title: 'Catcher in the Rye',
       author: 'J.D.Saliger',
       price: 29.99,
       imageUrl: 'assets/images/The Catcher.jpg',
@@ -36,13 +36,31 @@ class HomeScreen extends StatelessWidget {
       starRating: 4.3,
     ),
     Book(
-      id: '3',
+      id: '4',
       title: 'Things Fall Apart',
       author: 'Chinua Achebe',
       price: 34.99,
       imageUrl: 'assets/images/FallApart.jpg',
       category: 'Historical Fiction',
       starRating: 4.6,
+    ),
+     Book(
+      id: '5',
+      title: 'Think like a Monk',
+      author: 'Jay Shetty',
+      price: 44.99,
+      imageUrl: 'assets/images/Monk.jpg',
+      category: 'Positive Thinking',
+      starRating: 3.5,
+    ),
+     Book(
+      id: '6',
+      title: 'Pollyanna',
+      author: 'Eleanor H. Porter',
+      price: 34.99,
+      imageUrl: 'assets/images/Pollyana.jpg',
+      category: "childern's literature",
+      starRating: 4.7,
     ),
   ];
 
@@ -98,12 +116,10 @@ class HomeScreen extends StatelessWidget {
   ),
 ],
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        itemCount: books.length,
-        itemBuilder: (context, index) {
-          return BookWidget(book: books[index]);
-        },
+      body: GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: 0.6,
+        children: books.map((book) => BookWidget(book: book)).toList(),
       ),
     );
   }
